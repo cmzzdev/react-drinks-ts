@@ -23,7 +23,7 @@ export default function Header() {
                   : "text-white uppercase font-bold"
               }
             >
-              Inicio
+              Home
             </NavLink>
             <NavLink
               to="/favoritos"
@@ -33,7 +33,7 @@ export default function Header() {
                   : "text-white uppercase font-bold"
               }
             >
-              Favoritos
+              Favorites
             </NavLink>
           </nav>
         </div>
