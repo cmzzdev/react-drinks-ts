@@ -34,7 +34,7 @@ export default function SearchForm() {
 
   return (
     <form
-      className="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+      className="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-5 rounded-lg shadow space-y-6"
       onSubmit={handleSubmit}
     >
       <div className="space-y-4">
@@ -78,7 +78,7 @@ export default function SearchForm() {
       </div>
       <input
         type="submit"
-        value={"Find recipes"}
+        value={"Search recipes"}
         className="cursor-pointer bg-orange-800 hover:bg-orange-900 text-white font-bold w-full p-2 rounded-lg uppercase"
       />
     </form>

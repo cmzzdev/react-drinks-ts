@@ -9,14 +9,16 @@ export default function IndexPage() {
     <>
       <h1 className="text-6xl font-extrabold">Recipes</h1>
       {hasRecipes ? (
-        <>
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
           {drinks.drinks.map((drink) => (
             <DrinkCard key={drink.idDrink} drink={drink} />
           ))}
-        </>
+        </div>
       ) : (
         <>
-          <p>There are no results, use the form to search recipes</p>
+          <p className="mt-6 text-center text-lg">
+            There are no results, use the form to search recipes
+          </p>
         </>
       )}
     </>
