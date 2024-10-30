@@ -3,12 +3,12 @@ import { useAppStore } from "../stores/useAppStore";
 import { SearchFilter } from "../types";
 
 export default function SearchForm() {
-  const { categories, fetchCategories, searchRecipes } = useAppStore();
+  const { categories, fetchCategories, searchRecipes, showNotification } =
+    useAppStore();
   const [searchFilters, setSearchFilters] = useState<SearchFilter>({
     ingredient: "",
     category: "",
   });
-  const [error, setError] = useState("");
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -25,7 +25,7 @@ export default function SearchForm() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (Object.values(searchFilters).includes("")) {
-      setError("All fields are mandatory");
+      showNotification({ text: "All fields are mandatory", error: true });
       return;
     }
     // Api call

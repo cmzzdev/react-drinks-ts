@@ -16,7 +16,7 @@ export default function IndexPage() {
         </div>
       ) : (
         <>
-          <p className="mt-6 text-center text-lg">
+          <p className="my-10 text-center text-2xl">
             There are no results, use the form to search recipes
           </p>
         </>
